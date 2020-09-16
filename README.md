@@ -1,2 +1,1 @@
-# field-types
-Field types for primo
+# Fields for primo
