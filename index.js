@@ -1,13 +1,13 @@
 import Number from './FieldTypes/Number'
-import Range from './FieldTypes/Range'
+import Slider from './FieldTypes/Slider'
 import Content from './FieldTypes/Content'
 import Switch from './FieldTypes/Switch'
 
 export {
   Number,
-  Range,
+  Slider,
   Content,
   Switch
 }
 
-export default [ Number, Content, Switch, Range ]
+export default [ Number, Content, Switch, Slider ]

@@ -1,14 +1,13 @@
 <script>
-  import {TextField} from '@primo-app/inputs'
+  import {Slider} from '@primo-app/ui'
 
   export let field
 </script>
 
 <div class="w-full">
-  <TextField 
-    {...field} 
+  <Slider 
+    label={field.label}
     bind:value={field.value}
-    type="number"
   />
 </div>
 
