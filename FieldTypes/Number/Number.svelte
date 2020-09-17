@@ -1,5 +1,5 @@
 <script>
-  import {TextField} from '@primo-app/inputs'
+  import {TextField} from '@primo-app/ui'
 
   export let field
 </script>
