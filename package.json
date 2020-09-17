@@ -4,6 +4,7 @@
   "description": "field types for primo",
   "main": "index.js",
   "dependencies": {
+    "@primo-app/ui": "^1.0.0",
     "svelte": "^3.25.1"
   },
   "devDependencies": {},
