@@ -6,10 +6,9 @@ import URL from './FieldTypes/URL'
 
 export {
   Number,
-  Slider,
   Content,
   Switch,
   URL
 }
 
-export default [ Number, Content, Switch, Slider, URL ]
+export default [ Number, Content, Switch, URL ]
