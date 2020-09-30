@@ -1,6 +1,6 @@
 {
   "name": "@primo-app/field-types",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "field types for primo",
   "main": "index.js",
   "dependencies": {
