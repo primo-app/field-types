@@ -3,6 +3,10 @@
   const dispatch = createEventDispatcher()
 
   import marked from 'marked'
+  import TurndownService from 'turndown'
+  const turndown = new TurndownService()
+  const unmarked = turndown.turndown('<h1>Hello world!</h1>')  
+
   export let field
 
   function parseContent() {
@@ -11,7 +15,9 @@
     dispatch('input')
   }
 
-  let unparsed = field.value
+  console.log(unmarked)
+
+  let unparsed = turndown.turndown(field.value)
 </script>
 
 <label class="label" for={field.id}>
