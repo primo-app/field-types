@@ -1,10 +1,20 @@
 <script>
+  import {createEventDispatcher} from 'svelte'
+  const dispatch = createEventDispatcher()
+
+  import marked from 'marked'
   export let field
+
+  function parseContent(e) {
+    const markdown = marked(e.target.value)
+    field.value = markdown
+    dispatch('input')
+  }
 </script>
 
 <label class="label" for={field.id}>
   <span>{ field.label }</span>
-  <textarea id={field.id} rows="4" bind:value={field.value} on:input></textarea>
+  <textarea id={field.id} rows="8" on:input={parseContent}></textarea>
 </label>
 
 <style>
