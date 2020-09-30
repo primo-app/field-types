@@ -5,16 +5,18 @@
   import marked from 'marked'
   export let field
 
-  function parseContent(e) {
-    const markdown = marked(e.target.value)
+  function parseContent() {
+    const markdown = marked(unparsed)
     field.value = markdown
     dispatch('input')
   }
+
+  let unparsed = field.value
 </script>
 
 <label class="label" for={field.id}>
   <span>{ field.label }</span>
-  <textarea id={field.id} rows="8" on:input={parseContent}></textarea>
+  <textarea id={field.id} rows="8" bind:value={unparsed} on:input={parseContent}></textarea>
 </label>
 
 <style>
