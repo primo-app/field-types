@@ -5,7 +5,6 @@
   import marked from 'marked'
   import TurndownService from 'turndown'
   const turndown = new TurndownService()
-  const unmarked = turndown.turndown('<h1>Hello world!</h1>')  
 
   export let field
 
@@ -15,9 +14,8 @@
     dispatch('input')
   }
 
-  console.log(unmarked)
-
-  let unparsed = turndown.turndown(field.value)
+  $: console.log(field.value)
+  let unparsed = typeof field.value === 'string' ? turndown.turndown(field.value) : ''
 </script>
 
 <label class="label" for={field.id}>
